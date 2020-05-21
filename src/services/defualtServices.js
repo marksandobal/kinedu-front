@@ -26,10 +26,7 @@ export default {
   put (route, data) {
     return instance.put(`${BASE_URL}/${route}`, data)
   },
-  delete (route, id) {
-    return instance.delete(`${BASE_URL}/${route}/${id}`)
-  },
-  destroy (route) {
+  delete (route) {
     return instance.delete(`${BASE_URL}/${route}`)
   }
 }

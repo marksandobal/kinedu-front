@@ -4,13 +4,14 @@ import router from "./router";
 import store from "./store";
 import VueAxios from 'vue-axios';
 import axios from 'axios';
-import BootstrapVue from 'bootstrap-vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import moment from 'moment'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
 Vue.use(VueAxios, axios)
 
 Vue.filter('formatDate', function(value) {

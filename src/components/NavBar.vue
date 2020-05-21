@@ -4,16 +4,14 @@
     <b-navbar-brand href="#">
       <router-link class="nav-link" to="/home"></router-link>
     </b-navbar-brand>
-
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item>
           <router-link class="nav-link" to="/u/logs">Log de Actividades</router-link>
         </b-nav-item>
         <b-nav-item>
-          <router-link class="nav-link" to="/about">Asistentes</router-link>
+          <router-link class="nav-link" to="/u/assistants">Asistentes</router-link>
         </b-nav-item>
         <b-nav-item>
           <router-link class="nav-link" to="/babies">Bebes</router-link>
@@ -22,7 +20,6 @@
           <router-link class="nav-link" to="/Activities">Actividades</router-link>
         </b-nav-item>
       </b-navbar-nav>
-
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <b-nav-item-dropdown right>
@@ -36,7 +33,6 @@
     </b-collapse>
   </b-navbar>
 </div>
-
 </template>
 
 <script>

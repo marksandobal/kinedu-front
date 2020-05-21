@@ -24,13 +24,15 @@
         <b-form-select v-model="selected.status" :options="status"></b-form-select>
       </div>
       <div class="col-3">
-        <button type="button" class="btn btn-info" @click="filter">filter</button>
+        <button type="button" class="btn btn-info" @click="filter">
+          <b-icon-search></b-icon-search>
+          filter</button>
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-12">
-        <table class="table table-striped" id="table">
+        <table class="table table-striped text-left" id="table">
           <thead>
             <tr>
               <th>Bebé</th>
@@ -65,6 +67,7 @@
           :per-page="metaPagination.limit_value"
           aria-controls="my-table"
           @input="callPageNumber"
+          align="center"
         ></b-pagination>
       </div>
     </div>
