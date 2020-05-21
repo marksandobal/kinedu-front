@@ -20,7 +20,7 @@ export default new Vuex.Store({
         state.current_user = ''
       } else {
         state.current_user = decode(payload)
-        router.push({ name: 'Home' })
+        router.push({ name: 'Log de activitades' })
       }
     }
   },

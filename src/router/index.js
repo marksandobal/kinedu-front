@@ -13,16 +13,11 @@ const routes = [
     meta: { requiresAuth: false }
   },
   {
-    path: "/Home",
-    name: "Home",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Home.vue")
-  },
-  {
     path: "/u/logs",
     name: "Log de activitades",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/admin/ActivityLogs.vue")
+      import(/* webpackChunkName: "about" */ "../views/admin/ActivityLogs.vue"),
+      meta: { requiresAuth: true }
   },
   {
     path: "/u/assistants",
@@ -31,13 +26,16 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/admin/Assistants.vue")
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/u/babies",
+    name: "Bebés",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "about" */ "../views/admin/Babies.vue")
+  },
+  {
+    path: "/u/activities",
+    name: "Actividades",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/admin/Activities.vue")
   }
 ];
 

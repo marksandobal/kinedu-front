@@ -15,7 +15,8 @@ const instance = axios.create({
 
 export default {
   getAll (route, params) {
-    return instance.get(`${BASE_URL}/${route}`, {params})
+    console.log(process.env)
+    return instance.get(`${BASE_URL}/${route}`, { params })
   },
   get (route, id) {
     return instance.get(`${BASE_URL}/${route}/${id}`)

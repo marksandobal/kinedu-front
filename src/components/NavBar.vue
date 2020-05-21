@@ -1,9 +1,6 @@
 <template>
 <div v-if="user_exists">
   <b-navbar class="navbar navbar-expand-lg navbar-light bg-info text-light" toggleable="lg" type="light" variant="info">
-    <b-navbar-brand href="#">
-      <router-link class="nav-link" to="/home"></router-link>
-    </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
@@ -14,10 +11,10 @@
           <router-link class="nav-link" to="/u/assistants">Asistentes</router-link>
         </b-nav-item>
         <b-nav-item>
-          <router-link class="nav-link" to="/babies">Bebes</router-link>
+          <router-link class="nav-link" to="/u/babies">Bebes</router-link>
         </b-nav-item>
         <b-nav-item>
-          <router-link class="nav-link" to="/Activities">Actividades</router-link>
+          <router-link class="nav-link" to="/u/activities">Actividades</router-link>
         </b-nav-item>
       </b-navbar-nav>
       <!-- Right aligned nav items -->
