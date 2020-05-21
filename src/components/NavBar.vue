@@ -34,7 +34,6 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from "vuex";
-//import router from '../router'
 export default {
   name: "NavBar",
   data () {
@@ -47,21 +46,6 @@ export default {
   computed: {
     ...mapGetters(['user_exists']),
     ...mapState(['current_user'])
-    // route_paths: () => {
-    //   const paths = router.options.routes
-    //   return paths.filter(function (path) {
-    //     return ![
-    //       'login',
-    //       'carrier',
-    //       'plan por servicio',
-    //       'agregar plan',
-    //       'agregar servicio',
-    //       'servicios',
-    //       'agregar tarifas extras',
-    //       'detalles de servicio'
-    //     ].includes(path.name)
-    //   })
-    // }
   }
 }
 </script>

@@ -98,7 +98,6 @@
                 ></b-form-input>
                 <br>
                 <b-form-input
-                  type="number"
                   max="10"
                   v-model="assistant.phone"
                   required

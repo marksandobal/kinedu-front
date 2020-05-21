@@ -1,7 +1,10 @@
 # sky_kinedu_app
 
+
 ## Project setup
 ```
+Install nodejs
+
 npm install
 ```
 
