@@ -1,14 +1,28 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import store from "../store";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
+    name: "login",
+    component: () =>
+      import(/* webpackChunkName: "login" */ "../views/Login.vue"),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: "/Home",
     name: "Home",
-    component: Home
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Home.vue")
+  },
+  {
+    path: "/u/logs",
+    name: "Log de activitades",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/admin/ActivityLogs.vue")
   },
   {
     path: "/about",
@@ -26,5 +40,14 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
+router.beforeEach((to, from, next) => {
+  const protectedRoute = to.matched.some(record => record.meta.requiresAuth)
+  if (protectedRoute && store.state.token === '') {
+    next({ name: 'login' })
+  } else {
+    next()
+  }
+})
 
 export default router;
