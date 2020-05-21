@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import Vuex from 'vuex';
 import decode from 'jwt-decode'
 
 import router from '../router'
@@ -14,12 +14,13 @@ export default new Vuex.Store({
   },
   mutations: {
     new_user (state, payload) {
+      console.log(state)
       state.token = payload
       if (payload === '') {
         state.current_user = ''
       } else {
         state.current_user = decode(payload)
-        router.push({ name: 'inicio' })
+        router.push({ name: 'Home' })
       }
     }
   },
